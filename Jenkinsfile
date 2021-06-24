@@ -8,7 +8,7 @@ pipeline{
         }
         stage('deploy'){
             steps{
-                nodejs(nodeJSInstallationname: 'nodejs') {
+                nodejs(nodeJSInstallationName: 'nodejs') {
                     withAWS(credentials: 'aws-credenntials'){
                         sh 'serverless deploy'
                     }
