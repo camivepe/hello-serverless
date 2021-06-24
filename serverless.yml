@@ -18,7 +18,7 @@ iamRoleStatements:
         - dynamodb:GetItem
         - dynamodb:UpdateItem
       Resource: 
-        - { "Fn::GetAtt": ["MarketDynamoDbTableCVP", "Arn" ] }
+        - { "Fn::GetAtt": ["MarketDynamoDbTable", "Arn" ] }
 
 functions:
   seek:
@@ -36,7 +36,7 @@ functions:
 
 resources:
   Resources:
-    MarketDynamoDbTableCVP:
+    MarketDynamoDbTable:
       Type: 'AWS::DynamoDB::Table'
       Properties:
         AttributeDefinitions:
@@ -48,7 +48,7 @@ resources:
         KeySchema:
             - AttributeName: "itemID"
               KeyType: "HASH"
-        TableName: "Market"
+        TableName: "MarketCamiVePe"
 
 plugins:
   - serverless-offline

@@ -18,7 +18,7 @@ async function buyItem(itemID, requestedItemCount) {
     }
     const updateItemParams = {
         //TableName: process.env.marketTable,
-        TableName: "Market",
+        TableName: "MarketCamiVePe",
         Key: { itemID },
         UpdateExpression: "set itemCount = :itemCount",
         ExpressionAttributeValues: {

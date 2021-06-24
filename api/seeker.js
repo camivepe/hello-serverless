@@ -3,7 +3,7 @@ const aws = require('aws-sdk');
 async function searchItem(itemID) {
     const dynamoDb = new aws.DynamoDB.DocumentClient({endpoint: 'http://localhost:8000'});
     const getItemParams = {
-        TableName: "Market",
+        TableName: "MarketCamiVePe",
         Key: {
             itemID
         }
